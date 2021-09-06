@@ -4,21 +4,21 @@ import styled from 'styled-components';
 import Logo from './Logo';
 
 const NavStyles = styled.nav`
+  /* margin-bottom: 3rem; */
   .logo {
     transform: translateY(-25%);
   }
   ul {
     margin: 0;
     padding: 0;
+    text-align: center;
+    list-style: none;
     display: grid;
     grid-template-columns: 1fr 1fr auto 1fr 1fr;
     grid-gap: 2rem;
-    text-align: center;
-    list-style: none;
     align-items: center;
     margin-top: -6rem;
   }
-
   li {
     --rotate: -2deg;
     transform: rotate(var(--rotate));
@@ -46,13 +46,13 @@ const NavStyles = styled.nav`
     @media (max-width: 800px) {
       font-size: 2rem;
     }
-    // &[aria-current='page'] {
-    //   color: var(--red);
-    // }
+    /* &[aria-current='page'] {
+      color: var(--red);
+    } */
   }
   @media (max-width: 600px) {
     --columns: 4;
-    margin-botton: 2rem;
+    margin-bottom: 2rem;
     border-bottom: 2px solid var(--grey);
     padding-bottom: 2rem;
     ul {
@@ -78,10 +78,10 @@ export default function Nav() {
     <NavStyles>
       <ul>
         <li>
-          <Link to="/pizzas">Pizza Menu</Link>
+          <Link to="/">Hot Now</Link>
         </li>
         <li>
-          <Link to="/beers">Beers</Link>
+          <Link to="/pizzas/">Pizza Menu</Link>
         </li>
         <li className="logo-item">
           <Link to="/">

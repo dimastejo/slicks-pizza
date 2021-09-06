@@ -3,12 +3,12 @@ import styled from 'styled-components';
 import stripes from '../assets/images/stripes.svg';
 
 const LogoStyles = styled.div`
-  /* This value controls the entire size of the logo */
+  /* This value controls the entire size of the logo*/
   font-size: 6px;
   font-size: clamp(1px, 0.65vw, 8px);
   width: 30em;
   height: 30em;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
   margin: 0;
   --borderSize: 1em;
   background: white url(${stripes});
@@ -36,6 +36,7 @@ const LogoStyles = styled.div`
     grid-gap: 2em;
     transform: translateY(-0.7em);
   }
+
   .slices {
     font-size: 3.2em;
     letter-spacing: 0.2em;

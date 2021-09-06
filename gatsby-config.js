@@ -1,7 +1,27 @@
-module.exports = {
+import dotenv from 'dotenv';
+
+dotenv.config({ path: '.env' });
+
+export default {
+  pathPrefix: '/pizza',
   siteMetadata: {
-    siteUrl: "https://www.yourdomain.tld",
-    title: "My Gatsby Site",
+    title: `Slicks Slices`,
+    siteUrl: 'https://gatsby.pizza',
+    description: 'The best pizza place in Hamilton!',
+    twitter: '@slicksSlices',
   },
-  plugins: ["gatsby-plugin-sass"],
+  plugins: [
+    'gatsby-plugin-react-helmet',
+    'gatsby-plugin-styled-components',
+    {
+      // this is the name of the plugin you are adding
+      resolve: 'gatsby-source-sanity',
+      options: {
+        projectId: 'r742vxyl',
+        dataset: 'production',
+        watchMode: true,
+        token: process.env.SANITY_TOKEN,
+      },
+    },
+  ],
 };
